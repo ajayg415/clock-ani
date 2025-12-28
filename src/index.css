@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  margin: 0;
+  padding: 24px;
+  background: #f7f7fb;
+  color: #0f172a;
+}
+.app {
+  max-width: 880px;
+  margin: 0 auto;
+}
+header h1 {
+  margin: 0 0 8px 0;
+}
+.box {
+  padding: 24px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.08);
+}
