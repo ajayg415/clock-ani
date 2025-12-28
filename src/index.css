@@ -76,8 +76,14 @@ header h1 {
 
 .svg-minute { font-weight: 600; fill: #0f172a; font-size: 6px; opacity: 0.9 }
 
-.svg-minute.active {
+.svg-minute.active-second {
   fill: #ef4444;
+  font-weight: 800;
+  font-size: 10px;
+}
+
+.svg-minute.active-minute {
+  fill: blue;
   font-weight: 800;
   font-size: 10px;
 }
@@ -109,6 +115,7 @@ header h1 {
   background: #334155;
   border-radius: 6px;
   z-index: 2;
+  background: blue;
 }
 .hand.second {
   width: 2px;
@@ -143,7 +150,7 @@ header h1 {
 .legend li { margin: 6px 0; display:flex; align-items:center; gap:8px; }
 .legend-dot { width:12px; height:12px; border-radius:50%; display:inline-block }
 .legend-dot.second { background:#ef4444 }
-.legend-dot.minute { background:#334155 }
+.legend-dot.minute { background:blue }
 .legend-dot.hour { background:#0f172a }
 
 .explain { margin-top: 20px; background: #fff; padding: 12px; border-radius:8px }

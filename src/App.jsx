@@ -94,13 +94,18 @@ export default function App() {
                     })
 
                     // minute numbers 1..60 placed slightly closer to center; smaller font
-                    const currentSecond = (new Date()).getSeconds() === 0 ? 60 : (new Date()).getSeconds()
+                    const currentSecond = (new Date()).getSeconds() === 0 ? 60 : (new Date()).getSeconds();
+                    const currentMinute = (new Date()).getMinutes() === 0 ? 60 : (new Date()).getMinutes();
+                    const currentHour = (new Date()).getHours() % 12 === 0 ? 12 : (new Date()).getHours() % 12;
                     const minutes = [...Array(60)].map((_, idx) => {
                       const i = idx + 1
                       const angle = (i * 6) * (Math.PI / 180)
                       const x = cx + Math.sin(angle) * minuteRadius
                       const y = cy - Math.cos(angle) * minuteRadius
                       const isActive = i === currentSecond
+                      const isActiveMinute = i === currentMinute
+                      const isActiveHour = i === currentHour
+                      const classNames = isActive ? 'svg-minute active-second' : isActiveMinute ? 'svg-minute active-minute' : isActiveHour ? 'svg-minute active-hour' : 'svg-minute';
                       return (
                         <text
                           key={`m-${i}`}
@@ -108,7 +113,7 @@ export default function App() {
                           y={y}
                           textAnchor="middle"
                           dominantBaseline="middle"
-                          className={`svg-minute ${isActive ? 'active' : ''}`}
+                          className={classNames}
                         >
                           {i}
                         </text>
