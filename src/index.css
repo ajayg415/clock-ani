@@ -98,21 +98,21 @@ header h1 {
 }
 .hand.hour {
   width: 10px;
-  height: 100px;
+  height: calc( var(--clock-size) / 5.2 );
   background: #0f172a;
   border-radius: 6px;
   z-index: 3;
 }
 .hand.minute {
   width: 8px;
-  height: 130px;
+  height: calc( var(--clock-size) / 4);
   background: #334155;
   border-radius: 6px;
   z-index: 2;
 }
 .hand.second {
   width: 2px;
-  height: 186px;
+  height: calc( var(--clock-size) / 2.79);
   background: #ef4444;
   border-radius: 2px;
   z-index: 4;
